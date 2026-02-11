@@ -1,0 +1,222 @@
+@import url('fonts/main_font.css');
+
+* {
+  /* Сбрасывание стандартных стилей и добавление шрифтов */
+  margin: 0;
+  font-family: 'StratosSkyeng', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f5f7;
+}
+
+.index-page {
+  background: #e9dcff;
+}
+
+.facts-page {
+  background: #e9dcff;
+}
+
+body:not(.index-page):not(.facts-page):not(.memes-page) {
+  background: #e9dcff;
+}
+
+/* Общий блок контента */
+.content {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 120px; /* чтобы кнопки не перекрывали контент */
+}
+
+/* index.html background */
+.index-page .content {
+  /* Эти два свойства нужны чтобы фон подстраивался на весь экран */
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 120px 0 40px;
+}
+
+/* Класс для расположения элементов в 1 ряд */
+.in-one-line {
+  display: flex;
+  /* Отступ между элементами */
+  gap: 32px;
+}
+
+/* Класс для центрирования страницы */
+.center {
+  padding-left: calc(50% - 500px);
+  padding-right: calc(50% - 500px);
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+nav a {
+  color: #0b57d0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Выравнивание заголовков только на главной слева */
+.index-page h1,
+.index-page h2 {
+  text-align: left;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.avatar {
+  width: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* facts/memes/quotes pages */
+.wrap .card {
+  background: #fff;
+}
+
+.wrap h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.next {
+  margin-top: 16px;
+}
+
+.back {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Оформление фиолетовых кнопок-навигации */
+.arrow-btn {
+  display: block;
+  background-color: #894AFF;
+  color: #ffffff;
+  padding: 11px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 38px;
+  position: absolute;
+  top: 20px;
+}
+
+.arrow-btn-left {
+  left: 20px;
+}
+
+.arrow-btn-right {
+  right: 20px;
+}
+
+.arrow-btn:hover {
+  opacity: 0.9;
+}
+
+/* memes page grid */
+.memes-page {
+  background: #e9dcff;
+}
+
+.memes-wrap {
+  max-width: 900px;
+  padding-top: 24px;
+}
+
+.memes-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.memes-arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.index-wrap {
+  max-width: 900px;
+  padding-top: 32px;
+}
+
+.index-next {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.index-avatar {
+  display: block;
+  margin: 16px 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.grid img {
+  width: 45%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+  .grid img {
+    width: 100%;
+  }
+}
